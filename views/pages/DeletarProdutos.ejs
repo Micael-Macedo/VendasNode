@@ -1,0 +1,12 @@
+<%- include('../partials/header'); %>
+<section>
+<% if(produtos) {%>
+    <% produtos.forEach(produto => { %>
+        <form action="/produtos/deletar/<%= produto.idProduto %>" method="post">
+            <h2>Deseja deletar o produto <%= produto.Nome %></h2>
+            <button type="submit">Deletar</button>
+        </form>
+    <% }); %> 
+<% } %>
+</section>
+<%- include('../partials/footer'); %>

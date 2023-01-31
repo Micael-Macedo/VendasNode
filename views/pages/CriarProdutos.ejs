@@ -1,0 +1,17 @@
+<%- include('../partials/header'); %>
+<section>
+    <form action="/produtos/cadastrar" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <label for="preco">Preço</label>
+        <input type="text" id="preco" name="preco">
+        <label for="peso">Peso</label>
+        <input type="text" id="peso" name="peso">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" name="categoria">
+        <label for="empresa">Nome da empresa</label>
+        <input type="text" id="empresa" name="empresa">
+        <button type="submit">Cadastrar</button>
+    </form>
+</section>
+<%- include('../partials/footer'); %>

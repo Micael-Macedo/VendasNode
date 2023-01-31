@@ -1,0 +1,42 @@
+<%- include('../partials/header'); %>
+    <div>
+        <a href="/produtos/cadastrar">Cadastrar Produtos</a>
+    </div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Peso</th>
+            <th>Categoria</th>
+            <th>Empresa</th>
+            <th>&nbsp;</th>
+        </tr>
+        <% produtos.forEach(function(produto){ %>
+            <tr>
+                <td>
+                    <%= produto.idProduto %>
+                </td>
+                <td>
+                    <%= produto.Nome %>
+                </td>
+                <td>
+                    <%= produto.Preco %>
+                </td>
+                <td>
+                    <%= produto.Peso %>
+                </td>
+                <td>
+                    <%= produto.Categoria %>
+                </td>
+                <td>
+                    <%= produto.Empresa %>
+                </td>
+                <td>
+                    <a href="/produtos/editar/<%= produto.idProduto %>">Editar</a>
+                    <a href="/produtos/<%= produto.idProduto %>">Ver</a>
+                    <a href="/produtos/deletar/<%= produto.idProduto %>">Deletar</a></td>
+            </tr>
+            <% }); %>
+    </table>
+    <%- include('../partials/footer'); %>
