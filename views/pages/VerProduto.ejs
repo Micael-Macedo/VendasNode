@@ -1,7 +1,15 @@
 <%- include('../partials/header'); %>
 <section>
-    <div>
-        <h2></h2>
-    </div>
+    <% if(produtos) %> 
+    <% produtos.forEach(produto => { %>
+        <div>
+            <h2><%= produto.Nome %> </h2>
+            <p>ID: <%= produto.idProduto %> </p>
+            <p>Categoria: <%= produto.Categoria %> </p>
+            <p>Empresa: <%= produto.Empresa %> </p>
+            <p>Preço: R$<%= produto.Preco %></p> 
+            <p>Peso: <%= produto.Peso %></p>
+        </div>
+    <% }) %>
 </section>
 <%- include('../partials/footer'); %>

@@ -1,3 +1,18 @@
 <%- include('../partials/header'); %>
-
+<section>
+    <form action="/produtos/editar/<%= produto.idProduto %>" method="post">
+        <input type="hidden" name="idProduto" value="<%= produto.idProduto %>">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" value="<%= produto.Nome %>" name="nome">
+        <label for="preco">Preço</label>
+        <input type="text" id="preco" value="<%= produto.Preco %>" name="preco">
+        <label for="peso">Peso</label>
+        <input type="text" id="peso" value="<%= produto.Peso %>" name="peso">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" value="<%= produto.Categoria %>" name="categoria">
+        <label for="empresa">Nome da empresa</label>
+        <input type="text" id="empresa" value="<%= produto.Empresa %>" name="empresa">
+        <button type="submit">Cadastrar</button>
+    </form>
+</section>
 <%- include('../partials/footer'); %>
